@@ -1,3 +1,17 @@
+<?php
+
+if($_POST){
+    if( $_POST["usuario"] == "davidj" && $_POST["password"] == "54321" ) {
+        echo "Logueado, ok";
+
+        header("location:index.php");
+    } else{
+        echo "<script> alert('Usuario y contraseña incorrectas'); </script>";
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +35,7 @@
                         <form action="login.php" method="post">
                             Usuario: <input class="form-control" type="text" name="usuario" id="">
                             <br />
-                            Contraseña: <input class="form-control" type="text" name="password" id="">
+                            Contraseña: <input class="form-control" type="password" name="password" id="">
                             <br />
                             <button class="btn btn-success" type="submit">Entrar al portafolio</button>
                         </form>
