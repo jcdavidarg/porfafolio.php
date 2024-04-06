@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-</head>
-<body>
     <?php include("./header.php"); ?>
-    <h1>PAGINA DE INICIO</h1>
+    
+    <div class="p-5 bg-light">
+        <div class="container">
+            <h3 class="display-3">Bienvenidos</h3>
+            <p class="lead">Este es un portafolio privado</p>
+            <hr class="my-2">
+            <p>Mas información</p>
+        </div>
+    </div>
+
     <?php include("./footer.php"); ?>
-</body>
-</html>
