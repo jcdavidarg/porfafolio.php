@@ -1,7 +1,10 @@
 <?php
 
+session_start();
+
 if($_POST){
     if( $_POST["usuario"] == "davidj" && $_POST["password"] == "54321" ) {
+        $_SESSION["usuario"] = "davidj"; 
         echo "Logueado, ok";
 
         header("location:index.php");
@@ -18,7 +21,7 @@ if($_POST){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Login</title>
 </head>
 
@@ -32,6 +35,7 @@ if($_POST){
                 <div class="card">
                     <div class="card-header">Iniciar Sesión</div>
                     <div class="card-body">
+                        <!-- FORMULARIO -->
                         <form action="login.php" method="post">
                             Usuario: <input class="form-control" type="text" name="usuario" id="">
                             <br />
