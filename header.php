@@ -16,6 +16,6 @@ if(isset($_SESSION["usuario"]) != "davidj") {
 </head>
 <body>
     <div class="container">
-        <a href="./index.php">Inicio</a>
-        <a href="./portafolio.php">Portafolio</a>
+        <a href="./index.php">Inicio | </a>
+        <a href="./portafolio.php">Portafolio | </a>
         <a href="./logout.php">Cerrar</a>
