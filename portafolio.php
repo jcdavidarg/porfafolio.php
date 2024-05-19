@@ -95,7 +95,13 @@ $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
                     <tr>
                         <td class="align-middle"><?php echo $proyecto['id']; ?></td>
                         <td class="align-middle"><?php echo $proyecto['nombre']; ?></td>
-                        <td class="align-middle"><?php echo $proyecto['imagen']; ?></td>
+                        <td class="align-middle">
+                            <img width="150" 
+                                src="./imagenes/<?php echo $proyecto['imagen']; ?>" 
+                                class="img-fluid" 
+                                alt="imagen de referencia de <?php echo $proyecto['nombre']; ?>"
+                            >
+                        </td>
                         <td class="align-middle"><?php echo $proyecto['descripcion']; ?></td>
                                                                             <!-- MANDO POR LA URL UNA QUERY - PARAMETRO LLAMADO borrar con el id del registro -->
                         <td class="align-middle"> <a class="btn btn-danger" href="?borrar=<?php echo $proyecto['id']; ?>">Eliminar</a> </td>
