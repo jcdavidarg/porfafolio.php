@@ -21,10 +21,16 @@ class Connection {
 
         }
     }
-
+    //  Insertar datos
     public function ejecutar($sql) {
         $this->conexion->exec($sql);
         return $this->conexion->lastInsertId();
+    }
+    //  Consultar datos
+    public function consultar($sql) {
+        $sentencia = $this->conexion->prepare($sql);
+        $sentencia->execute();
+        return $sentencia->fetchAll();
     }
 }
 
