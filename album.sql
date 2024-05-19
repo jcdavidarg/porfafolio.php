@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-05-2024 a las 06:39:25
+-- Tiempo de generación: 19-05-2024 a las 06:50:49
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -62,8 +62,8 @@ CREATE TABLE `proyectos` (
 --
 
 INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES
-(1, 'proyecto1', 'imagen 1', 'imagen del proyecto 1'),
-(2, 'proyecto1', 'imagen 1', 'imagen del proyecto 1');
+(46, 'matic usdt', '1716093922_matic.png', 'proyeccion de matic'),
+(47, 'ada usdt', '1716093936_ada.png', 'ada a maximos');
 
 --
 -- Índices para tablas volcadas
@@ -95,7 +95,7 @@ ALTER TABLE `fotos`
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
