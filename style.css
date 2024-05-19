@@ -1,0 +1,9 @@
+.image-container {
+    height: 200px; /* Ajusta esta altura según tus necesidades */
+    overflow: hidden;
+}
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
