@@ -21,7 +21,7 @@ class Connection {
 
         }
     }
-    //  Insertar datos
+    //  Insertar / Borrar / Actualizar datos
     public function ejecutar($sql) {
         $this->conexion->exec($sql);
         return $this->conexion->lastInsertId();

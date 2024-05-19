@@ -18,6 +18,15 @@ if ($_POST) {
     //print_r($mostrar);
 }
 
+if ($_GET) {
+
+    //DELETE FROM `proyectos` WHERE `proyectos`.`id` = 20
+    $id = $_GET['borrar'];
+    $objConexion = new Connection();
+    $sql = "DELETE FROM `proyectos` WHERE `proyectos`.`id` = " . $id;
+    $objConexion->ejecutar($sql);
+}
+
 $objConexion = new Connection();
 $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
 //print_r($proyectos);
@@ -64,7 +73,7 @@ $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
                         <td class="align-middle"><?php echo $proyecto['nombre']; ?></td>
                         <td class="align-middle"><?php echo $proyecto['imagen']; ?></td>
                         <td class="align-middle"><?php echo $proyecto['descripcion']; ?></td>
-                        <td class="align-middle"> <a class="btn btn-danger" href="#">Eliminar</a> </td>
+                        <td class="align-middle"> <a class="btn btn-danger" href="?borrar=<?php echo $proyecto['id']; ?>">Eliminar</a> </td>
                     </tr>
                     <?php } ?>
                 </tbody>
