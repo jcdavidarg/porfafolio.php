@@ -28,6 +28,9 @@ if ($_POST) {
     $objConexion = new Connection();
     $sql = "INSERT INTO `proyectos` (`id`, `nombre`, `imagen`, `descripcion`) VALUES (NULL, '$nombre', '$imagen', '$descripcion');";
     $objConexion->ejecutar($sql);
+
+    //  Redireccion para evitar reenviar informacion al actualizar la pagina
+    header("location:portafolio.php");
 }
 
 if ($_GET) {
@@ -45,6 +48,9 @@ if ($_GET) {
     //  Borrar el registro en la db del id seleccionando
     $sql = "DELETE FROM `proyectos` WHERE `proyectos`.`id` = " . $id;
     $objConexion->ejecutar($sql);
+
+    //  Redireccion para evitar reenviar informacion al actualizar la pagina
+    header("location:portafolio.php");
 }
 
 //  Creo una instancia para consultar y guardar en un variable la table proyectos de la db
@@ -65,13 +71,13 @@ $proyectos = $objConexion->consultar("SELECT * FROM `proyectos`");
                 </div>
                 <div class="card-body">
                     <form action="./portafolio.php" method="post" enctype="multipart/form-data">
-
-                        Nombre del proyecto: <input class="form-control" type="text" name="nombre" id="">
+                        <!-- REQUIRED PARA QUE ENVIAR VACIO -->
+                        Nombre del proyecto: <input required class="form-control" type="text" name="nombre" id="">
                         <br />
-                        Imagen del proyecto: <input class="form-control" type="file" name="archivo" id="">
+                        Imagen del proyecto: <input required class="form-control" type="file" name="archivo" id="">
                         <br />
                         Descripción:
-                        <textarea class="form-control" name="descripcion" id="" rows="3"></textarea>
+                        <textarea required class="form-control" name="descripcion" id="" rows="3"></textarea>
                         <br/>
                         <input class="btn btn-success" type="submit" value="Enviar proyecto">
 
